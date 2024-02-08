@@ -18,6 +18,13 @@ const config = {
       },
     },
     extend: {
+      height: {
+        '3lvh': '300vh',
+      },
+      margin: {
+        '50lvh': '50vh',
+        '100lvh': '100vh',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
