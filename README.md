@@ -1,0 +1,1 @@
+This Repo contains a collection of varities of animations.
