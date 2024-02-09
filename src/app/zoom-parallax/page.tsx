@@ -1,27 +1,27 @@
-'use client'
+"use client";
 
 import ZoomParallax from "@/components/ZoomParallax";
 import { useEffect } from "react";
-import Lenis from '@studio-freight/lenis';
-
+import Lenis from "@studio-freight/lenis";
 
 const page = () => {
 
-  useEffect( () => {
-    const lenis = new Lenis()
-   
+  useEffect(() => {
+    const lenis = new Lenis();
+
     function raf(time: any) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf)
-},[])
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <div>
-        <ZoomParallax />
+      <ZoomParallax />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
