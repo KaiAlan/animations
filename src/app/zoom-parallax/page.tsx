@@ -4,7 +4,7 @@ import ZoomParallax from "@/components/ZoomParallax";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
-const Page = () => {
+const ZoomParallaxPage = () => {
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -24,4 +24,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ZoomParallaxPage;
