@@ -12,7 +12,7 @@ const Sidebar = () => {
                                 <div className="grid grid-flow-row auto-rows-max text-sm">
                                     <Link href="zoom-parallax" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Zoom Parallax</Link>
                                     <Link href="zoom-parallax-01" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Zoom Parallax Mountains</Link>
-                                    <Link href="zoom-parallax" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Zoom Parallax</Link>
+                                    <Link href="magnetic-button" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Magnetic Social Buttons</Link>
                                     <Link href="zoom-parallax" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Zoom Parallax</Link>
                                 </div>
                             </div>
