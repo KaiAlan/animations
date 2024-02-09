@@ -11,21 +11,10 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './styles.module.scss';
 
 import Image from 'next/image'
-import { useRef, useEffect } from 'react';
-import Lenis from '@studio-freight/lenis/types'
+import { useRef } from 'react';
 
 const ZoomParallax = () => {
 
-  useEffect( () => {
-    const lenis = new Lenis()
-   
-    function raf(time: any) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-},[])
 
   const container = useRef(null);
 
