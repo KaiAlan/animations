@@ -23,9 +23,9 @@ const SmoothScrollPage = () => {
 
   return (
     <div>
-      <div className="flex flex-col justify-start items-start h-screen w-full gap-3">
+      <div className="flex flex-col justify-start items-start h-screen w-full gap-3 mt-6">
         <div className="flex flex-col justify-start items-start pb-10 md:pb-16 gap-3">
-          <h1 className="font-semibold">Smooth Parallax Scroll</h1>
+          <h1 className="font-semibold text-3xl">Smooth Parallax Scroll</h1>
           <p className="text-sm font-light">
             A smooth parallax scroll with Framer motion, Lenis and NextJs
           </p>

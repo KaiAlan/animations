@@ -73,7 +73,7 @@ const Column = ({ images, y=0 }: any) => {
       {images.map((src: any, i: number) => {
         return (
           <div key={i} className={styles.imageContainer}>
-            <Image src={src} alt="image" fill />
+            <Image src={src} alt="image" fill placeholder='blur' />
           </div>
         );
       })}
