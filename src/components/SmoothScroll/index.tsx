@@ -52,7 +52,7 @@ const SmoothScroll = () => {
         <div className={styles.galleryWrapper}>
           <Column images={[images[0], images[1], images[2]]} y={y} />
 
-          <Column images={[images[5], images[4], images[5]]} y={y2} />
+          <Column images={[images[5], images[4], images[3]]} y={y2} />
 
           <Column images={[images[6], images[7], images[8]]} y={y3} />
 

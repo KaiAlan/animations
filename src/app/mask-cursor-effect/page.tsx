@@ -1,13 +1,14 @@
-"use client";
+'use client'
 
-import SmoothScroll from "@/components/SmoothScroll";
+import MaskCursorEffect from '@/components/MaskCursorEffect'
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import ScrollIcon from "@/components/ScrollIcon";
 
-const SmoothScrollPage = () => {
+
+const MaskCursorEffectPage = () => {
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -18,14 +19,13 @@ const SmoothScrollPage = () => {
     };
     requestAnimationFrame(raf);
   }, []);
-
   return (
     <div>
-      <div className="flex flex-col justify-start items-start h-screen w-full gap-3 mt-6">
+      <div className="flex flex-col justify-start items-start h-full w-full gap-3 mt-6">
         <div className="flex flex-col justify-start items-start pb-10 md:pb-16 gap-3">
-          <h1 className="font-semibold text-3xl">Smooth Parallax Scroll</h1>
+          <h1 className="font-semibold text-3xl">Mouse Cursor Effect</h1>
           <p className="text-sm font-light">
-            A smooth parallax scroll with Framer motion, Lenis and NextJs
+            A mouse cursor reveal effect with Framer motion, Lenis and NextJs
           </p>
           <div className="flex gap-2">
             <Badge variant="outline" className=" bg-blue-600 bg-opacity-20 p-2">
@@ -35,7 +35,7 @@ const SmoothScrollPage = () => {
               variant="outline"
               className=" bg-green-600 bg-opacity-20 p-2"
             >
-              Parallax
+              Cursor reveal
             </Badge>
             <Badge
               variant="outline"
@@ -153,13 +153,10 @@ const SmoothScrollPage = () => {
             </Link>
           </p>
         </div>
-          <div className="flex justify-center items-center w-full h-full">
-            <ScrollIcon />
-          </div>
-      </div>
-      <SmoothScroll />
+        </div>
+        <MaskCursorEffect />
     </div>
-  );
-};
+  )
+}
 
-export default SmoothScrollPage;
+export default MaskCursorEffectPage;
