@@ -26,13 +26,13 @@ const MaskCursorEffect = () => {
                 onMouseLeave={() => {setIsHovered(false)}}
                 className="w-full md:w-4/5 p-10"
                 >
-                A visual designer - with skills that haven't been replaced by A.I
+                A visual designer - with skills that have not been replaced by A.I
                 (yet) - making good shit only if the paycheck is equally good.
                 </p>
             </motion.div>
             <div className="flex justify-center items-center text-[#afa18f] text-xl md:text-4xl lg:text-6xl leading-6 md:leading-10 lg:leading-[60px] cursor-default w-full h-full">
                 <p className="w-full md:w-4/5 p-10">
-                I'm a <span className="text-[#ec4e39]">selectively skilled</span> product designer with strong
+                I am a <span className="text-[#ec4e39]">selectively skilled</span> product designer with strong
                 focus on producing high quality & impactful digital experience.
                 </p>
             </div>
