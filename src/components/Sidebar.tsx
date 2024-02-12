@@ -15,6 +15,7 @@ const Sidebar = () => {
                                     <Link href="magnetic-button" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Magnetic Social Buttons</Link>
                                     <Link href="smooth-scroll" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Smooth Scroll</Link>
                                     <Link href="mask-cursor-effect" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Mask Cursor Effect</Link>
+                                    <Link href="smooth-scroll" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Slide Scroll</Link>
                                 </div>
                             </div>
                         </div>
