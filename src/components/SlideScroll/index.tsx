@@ -132,6 +132,7 @@ const Row = ({ images, x = 0 }: any) => {
         {images.map((src: any, i: number) => {
           return (
             <Image
+            key={i}
               src={src}
               alt="image"
               objectFit="cover"
