@@ -9,12 +9,13 @@ import Picture6 from "./assets/p-1-6.png";
 import Picture7 from "./assets/p-1-7.png";
 import Picture8 from "./assets/p-1-8.png";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import {
   useScroll,
   useTransform,
   motion,
+  spring,
 } from "framer-motion";
 import useDimension from "./useDimension";
 
@@ -33,24 +34,27 @@ const SlideScroll = () => {
   const scene = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scene,
-    offset: ["start start", "center end"],
+    offset: ["0.1 start", "0.7 end"],
   });
 
   // const { height } = useDimension();
 
-  const x = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const opacityY = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
+  const RotateX = useTransform(scrollYProgress, [0, 1], [30, 0]);
+  const RotateY = useTransform(scrollYProgress, [0, 1], [10, 0]);
+  const RotateZ = useTransform(scrollYProgress, [0, 1], [30, 0]);
+  const TranslateY = useTransform(scrollYProgress, [0, 1], [-1000, 0]);
 
 //   const transformer = transform([0, 100], [0, 360]);
 //   const rotation = transformer(20);
 
   // const rotate = transformer(50)
 
-
   return (
     <main className="h-full w-full flex flex-col justify-center items-center relative">
       <div
         ref={scene}
-        className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+        className="h-[200vh] py-40 overflow-hidden  antialiased relative flex flex-col justify-between self-auto [perspective:1000px] [transform-style:preserve-3d]"
       >
         {/* <div className='h-screen w-full'> */}
         <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
@@ -65,15 +69,14 @@ const SlideScroll = () => {
         </div>
         {/* </div> */}
         <motion.div
-          initial={{ opacity: 0.2, rotateX: 50, rotateY: 10, rotateZ: 30, translateY: -1200 }}
-          whileInView={{ opacity: 1, rotateX: 0, rotateZ: 0, translateY: 500}}
-          transition={{ duration: x, ease: "easeInOut" }}
-          viewport={{root: scene}}
+          initial={{ opacity: 0.2, rotateX: 30, rotateY: 10, rotateZ: 30, translateY: -1000 }}
+          transition={{ type: 'spring', ease: "backInOut", delay: 1 }}
+          style={{opacity: opacityY, rotateX:RotateX, rotateY: RotateY, rotateZ: RotateZ, translateY: TranslateY}}
         >
           <SlideScrollDiv />
         </motion.div>
       </div>
-      {/* <div className='h-screen w-full'/> */}
+      <div className='h-screen w-full'/>
     </main>
   );
 };
@@ -91,10 +94,12 @@ const SlideScrollDiv = () => {
 
   const x1 = useTransform(scrollYProgress, [0, 1], [0, height / 2]);
   const x2 = useTransform(scrollYProgress, [1, 0], [0, height / 2]);
+  
+
   return (
     <div
       ref={container}
-      className="flex flex-col justify-center items-center w-full border gap-10"
+      className="flex flex-col justify-center items-center w-full gap-10"
     >
       <Row
         images={[
@@ -124,7 +129,7 @@ const SlideScrollDiv = () => {
 
 const Row = ({ images, x = 0 }: any) => {
   return (
-    <div className="flex h-1/3 w-full border rounded-lg overflow-hidden">
+    <div className="flex h-1/3 w-full rounded-lg overflow-hidden">
       <motion.div
         style={{ x }}
         className="flex justify-center items-center gap-10 h-full w-full bg-transparent relative -left-2/4 "
@@ -137,7 +142,7 @@ const Row = ({ images, x = 0 }: any) => {
               alt="image"
               objectFit="cover"
               placeholder="blur"
-              className="h-full w-1/3 border rounded-lg hover:-translate-y-5 hover:scale-110 hover:ease-in-out hover:duration-500"
+              className="h-full w-1/3 rounded-lg hover:-translate-y-5 hover:scale-110 hover:ease-in-out hover:duration-500 hover:opacity-25"
             />
           );
         })}
