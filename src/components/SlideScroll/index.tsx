@@ -42,8 +42,8 @@ const SlideScroll = () => {
   const opacityY = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
   const RotateX = useTransform(scrollYProgress, [0, 1], [30, 0]);
   const RotateY = useTransform(scrollYProgress, [0, 1], [10, 0]);
-  const RotateZ = useTransform(scrollYProgress, [0, 1], [30, 0]);
-  const TranslateY = useTransform(scrollYProgress, [0, 1], [-1000, 0]);
+  const RotateZ = useTransform(scrollYProgress, [0, 1], [20, 0]);
+  const TranslateY = useTransform(scrollYProgress, [0, 1], [-900, 0]);
 
 //   const transformer = transform([0, 100], [0, 360]);
 //   const rotation = transformer(20);
@@ -57,7 +57,7 @@ const SlideScroll = () => {
         className="h-[200vh] py-40 overflow-hidden  antialiased relative flex flex-col justify-between self-auto [perspective:1000px] [transform-style:preserve-3d]"
       >
         {/* <div className='h-screen w-full'> */}
-        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0 z-10 ">
           <h1 className=" text-2xl md:text-7xl font-bold">
             I have made <br /> Some cool projects
           </h1>
@@ -69,7 +69,7 @@ const SlideScroll = () => {
         </div>
         {/* </div> */}
         <motion.div
-          initial={{ opacity: 0.2, rotateX: 30, rotateY: 10, rotateZ: 30, translateY: -1000 }}
+          initial={{ opacity: 0.1, rotateX: 30, rotateY: 10, rotateZ: 20, translateY: -900, translateX:-100 }}
           transition={{ type: 'spring', ease: "backInOut", delay: 1 }}
           style={{opacity: opacityY, rotateX:RotateX, rotateY: RotateY, rotateZ: RotateZ, translateY: TranslateY}}
         >
