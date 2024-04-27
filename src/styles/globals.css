@@ -1,4 +1,36 @@
 @tailwind base;
+
+:root {
+  --primaryScrollbarColor: #000000;
+  --secondaryScrollbarColor: rgba(31, 209, 253, 0.4);
+  --tertiaryScrollbarColor: rgba(31, 209, 253, 0.4);
+}
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondaryScrollbarColor) var(--primaryScrollbarColor);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primaryScrollbarColor);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondaryScrollbarColor);
+  border-radius: 14px;
+  border: 3px solid var(--primaryScrollbarColor);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiaryScrollbarColor);
+}
+
 @tailwind components;
 @tailwind utilities;
  
