@@ -17,6 +17,7 @@ const Sidebar = () => {
                                     <Link href="mask-cursor-effect" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Mask Cursor Effect</Link>
                                     <Link href="slide-scroll" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Slide Scroll</Link>
                                     <Link href="trailing-mouse" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Trailing Mouse Effects</Link>
+                                    <Link href="haccky-text-animation" className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground">Hackky Text Animation</Link>
                                 </div>
                             </div>
                         </div>
